@@ -5,16 +5,17 @@ html
     link(rel='stylesheet', href='/css/style.css')
   body
     h1 Update Custom Object Form
-    form(action='/update-cobj', method='post')
-      div
-        label(for='Pet name') Name:
-        input(type='text', id='pet_name', name='Pet name')
-      div
-        label(for='Pet type') Property 1:
-        input(type='text', id='pet_type', name='Pet type')
-      div
-        label(for='Pet age') Property 2:
-        input(type='number', id='pet_age', name='Pet age')
-      div
-        button(type='submit') Submit
+    .form-wrapper
+      form(action='/update-cobj', method='post')
+        div
+          label(for='pet_name') Pet Name:
+          input(type='text', id='pet_name', name='pet_name')
+        div
+          label(for='pet_type') Pet Type:
+          input(type='text', id='pet_type', name='pet_type')
+        div
+          label(for='pet_age') Pet Age:
+          input(type='number', id='pet_age', name='pet_age')
+        div
+          input(type='submit', value='Submit')
     a(href='/') Return to the homepage
