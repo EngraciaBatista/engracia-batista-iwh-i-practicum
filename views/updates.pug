@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Update Custom Object Form
+    form(action='/update-cobj', method='post')
+      div
+        label(for='Pet name') Name:
+        input(type='text', id='pet_name', name='Pet name')
+      div
+        label(for='Pet type') Property 1:
+        input(type='text', id='pet_type', name='Pet type')
+      div
+        label(for='Pet age') Property 2:
+        input(type='number', id='pet_age', name='Pet age')
+      div
+        button(type='submit') Submit
+    a(href='/') Return to the homepage

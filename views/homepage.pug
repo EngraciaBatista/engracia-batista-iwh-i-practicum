@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Custom Objects List
+    a(href='/update-cobj') Add to this table
+    table
+      thead
+        tr
+          th pet_name
+          th pet_type
+          th pet_age
+      tbody
+        each item in data
+          tr
+            td= item.properties.pet_name
+            td= item.properties.pet_type
+            td= item.properties.pet_age
+    a(href='/') Return to the homepage
