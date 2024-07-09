@@ -13,7 +13,7 @@ const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS;
 
 // Route 1: Homepage to display custom objects
 app.get('/', async (req, res) => {
-    const customObjectsURL = `https://api.hubapi.com/crm/v3/objects/YOUR_CUSTOM_OBJECT_ID`;
+    const customObjectsURL = `https://api.hubapi.com/crm/v3/objects/Pets/`;
     const headers = {
         Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
         'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ app.post('/update-cobj', async (req, res) => {
         }
     };
 
-    const customObjectsURL = `https://api.hubapi.com/crm/v3/objects/YOUR_CUSTOM_OBJECT_ID`;
+    const customObjectsURL = `https://api.hubapi.com/crm/v3/objects/Pets`;
     const headers = {
         Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
         'Content-Type': 'application/json'
